@@ -15,7 +15,7 @@ defmodule BigBrother.FS.Watcher do
     ~r"lib/.*(ex)$"
   ]
 
-  defp app_config(), do: Application.get_env(:big_brother, :reload_config) || []
+  defp app_config(), do: Application.get_env(:big_brother_ex, :reload_config) || []
 
   def start_link(opts) do
     GenServer.start_link(__MODULE__, opts, name: __MODULE__)

@@ -9,7 +9,7 @@ Add :big_brother to the list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:big_brother, "~> 0.1", only: [:dev]}
+    {:big_brother_ex, "~> 0.1", only: [:dev]}
   ]
 end
 ```
@@ -19,7 +19,7 @@ end
 You can configure the dependency by adding to `config/dev.exs` :
 
 ```elixir
-config :big_brother, :reload_config,
+config :big_brother_ex, :reload_config,
   reloader: BigBrother.FS.Reloader,
   debounce: 1000,
   patterns: [
